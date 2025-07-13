@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JuneAndroidBatch</string>
+    <string name= "temp"> this is tempe class , we required only on temp basisw , no need to call</string>
+</resources>
