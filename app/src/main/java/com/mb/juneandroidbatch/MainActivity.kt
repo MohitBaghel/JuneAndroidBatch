@@ -20,4 +20,4 @@ class MainActivity : AppCompatActivity() {
 }
 
 // testing
-
+// test terminal
