@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">JuneAndroidBatch</string>
-    <string name= "temp"> this is tempe class , we required only on temp basisw , no need to call</string>
+    <string name="temp"> this is tempe class , we required only on temp basisw , no need to call</string>
+
+    <string name="project">Projects</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="lifecycle">LifeCycle</string>
 </resources>
