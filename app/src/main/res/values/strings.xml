@@ -6,4 +6,10 @@
     <string name="simple_calculator">Simple Calculator</string>
     <string name="bmi_calculator">BMI Calculator</string>
     <string name="lifecycle">LifeCycle</string>
+    <string name="your_health">Your health</string>
+    <string name="calculate_your_bmi">Calculate your BMI</string>
+    <string name="calaculate_bmi">Calaculate BMI</string>
+    <string name="height_in_inch">Height in inch</string>
+    <string name="height_in_ft">Height in ft</string>
+    <string name="enter_your_weight_in_kg">Enter your weight in kg</string>
 </resources>

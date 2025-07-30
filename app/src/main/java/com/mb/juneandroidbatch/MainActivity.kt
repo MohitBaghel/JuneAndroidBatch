@@ -46,9 +46,14 @@ class MainActivity : AppCompatActivity() {
 
 
         bmiCalculator.setOnClickListener {
-            Intent(this, BMICalculator:: class.java).also{
-                startActivity(it)
+            try {
+                Intent(this, BMICalculator:: class.java).also{
+                    startActivity(it)
+                }
+            } catch (e: Exception) {
+                Log.e("MainActivity", "Error starting BMI Calculator", e)
             }
+
         }
     }
 }

@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".BMICalculator">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/your_health"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate_your_bmi"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textSize="46sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/your_health_tv"
+            android:text="@string/your_health"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/weight_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:hint="@string/enter_your_weight_in_kg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/height_ft_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/height_in_ft"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/height_inch_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="@string/height_in_inch"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/calculate_bmi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calaculate_bmi"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+
+
+</LinearLayout>
