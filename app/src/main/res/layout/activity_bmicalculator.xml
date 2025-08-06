@@ -32,11 +32,11 @@
             android:textSize="46sp"/>
 
         <TextView
+            android:id="@+id/your_health_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:id="@+id/your_health_tv"
-            android:text="@string/your_health"/>
+            android:text="@string/your_health" />
     </LinearLayout>
 
 

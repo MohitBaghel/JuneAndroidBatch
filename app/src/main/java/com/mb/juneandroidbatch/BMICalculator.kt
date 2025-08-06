@@ -3,6 +3,7 @@ package com.mb.juneandroidbatch
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +18,7 @@ class BMICalculator : AppCompatActivity() {
     private  lateinit var height_in : EditText
     private  lateinit var bmi : Button
     private  lateinit var health : TextView
+    private lateinit var mainll : LinearLayout
 
 
 
@@ -43,6 +45,7 @@ class BMICalculator : AppCompatActivity() {
         height_in = findViewById(R.id.height_inch_et)
         bmi = findViewById(R.id.calculate_bmi_btn)
         health = findViewById(R.id.your_health_tv)
+        mainll = findViewById(R.id.main)
     }
 
      fun calculateBMi(){
@@ -61,7 +64,17 @@ class BMICalculator : AppCompatActivity() {
              val bmi = weight/ (totalM * totalM)
 
              if(bmi> 25){
-                 Toast.makeText(this, "You are overweight", Toast.LENGTH_SHORT).show()
+                 Toast.makeText(this, getString(R.string.you_are_overweight), Toast.LENGTH_SHORT).show()
+                 health.text = getString(R.string.you_are_overweight)
+                 mainll.setBackgroundColor(resources.getColor(R.color.red))
+             } else if(bmi < 18){
+                 Toast.makeText(this, getString(R.string.you_are_underweight), Toast.LENGTH_SHORT).show()
+                 health.text = getString(R.string.you_are_underweight)
+                 mainll.setBackgroundColor(resources.getColor(R.color.yellow))
+             } else {
+                 Toast.makeText(this, getString(R.string.you_are_healthy), Toast.LENGTH_SHORT).show()
+                 health.text = getString(R.string.you_are_healthy)
+                 mainll.setBackgroundColor(resources.getColor(R.color.green))
              }
 
 

@@ -12,4 +12,8 @@
     <string name="height_in_inch">Height in inch</string>
     <string name="height_in_ft">Height in ft</string>
     <string name="enter_your_weight_in_kg">Enter your weight in kg</string>
+    <string name="you_are_overweight">You are overweight</string>
+    <string name="you_are_underweight">You are underWeight</string>
+    <string name="you_are_healthy">You are healthy</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
 </resources>
