@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val simpleCalculator = findViewById<Button>(R.id.simple_calculator_btn)
         val bmiCalculator = findViewById<Button>(R.id.bmi_calculator_btn)
         val lifecycle = findViewById<Button>(R.id.lifecycle)
+        val tictac = findViewById<Button>(R.id.tictactoe_btn)
 
 
         simpleCalculator.setOnClickListener {
@@ -54,6 +55,17 @@ class MainActivity : AppCompatActivity() {
                 Log.e("MainActivity", "Error starting BMI Calculator", e)
             }
 
+        }
+
+
+        tictac.setOnClickListener {
+            try {
+                Intent(this, TicTacToe:: class.java).also {
+                    startActivity(it)
+                }
+            }catch (e: Exception){
+                e.printStackTrace()
+            }
         }
     }
 }
