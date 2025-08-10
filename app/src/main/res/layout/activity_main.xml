@@ -7,6 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
 
     <TextView
         android:id="@+id/textView2"
@@ -57,6 +63,27 @@
             android:text="@string/tic_tac_toe"
             android:layout_marginTop="10dp"
             android:id="@+id/tictactoe_btn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragments"
+            android:layout_marginTop="10dp"
+            android:id="@+id/frag_btn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewPager"
+            android:layout_marginTop="10dp"
+            android:id="@+id/viewpager_btn"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_rv"
+            android:visibility="gone"
+            tools:listitem="@layout/name_item"/>
 
 
     </LinearLayout>
