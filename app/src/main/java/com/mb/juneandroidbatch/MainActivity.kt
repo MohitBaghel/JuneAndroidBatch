@@ -11,10 +11,34 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.mb.juneandroidbatch.fragment.FragmentTest
+import com.mb.juneandroidbatch.recycler.NameAdapter
+import com.mb.juneandroidbatch.recycler.NameItem
 
 class MainActivity : AppCompatActivity() {
 
 
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var nameAdapter: NameAdapter
+    private val namelist = listOf(
+        NameItem("John Doe"),
+        NameItem("Jane Smith"),
+        NameItem("Alice Johnson"),
+        NameItem("Akila"),
+        NameItem("vsd"),
+        NameItem("svd Doe"),
+        NameItem("svd Smith"),
+        NameItem("vsd Johnson"),
+        NameItem("svd"),
+        NameItem("vs"),
+        NameItem("vsdf Doe"),
+        NameItem("Janevsdv Smisvdth"),
+        NameItem("svd Johnson"),
+        NameItem("vsd"),
+        NameItem("svd")
+    )
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +55,16 @@ class MainActivity : AppCompatActivity() {
         val bmiCalculator = findViewById<Button>(R.id.bmi_calculator_btn)
         val lifecycle = findViewById<Button>(R.id.lifecycle)
         val tictac = findViewById<Button>(R.id.tictactoe_btn)
+        val frag = findViewById<Button>(R.id.frag_btn)
+
+        frag.setOnClickListener {
+            replace(fragment = FragmentTest())
+        }
+
+        recyclerView = findViewById(R.id.list_rv)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        nameAdapter = NameAdapter(namelist)
+        recyclerView.adapter = nameAdapter
 
 
         simpleCalculator.setOnClickListener {
@@ -67,6 +101,14 @@ class MainActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
+    }
+
+
+    private  fun replace(fragment : FragmentTest){
+        val fragmentTransaction  = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_layout, fragment)
+        fragmentTransaction.commit()
+
     }
 }
 
