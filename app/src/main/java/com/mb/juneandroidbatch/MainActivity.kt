@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mb.juneandroidbatch.fragment.FragmentTest
 import com.mb.juneandroidbatch.recycler.NameAdapter
 import com.mb.juneandroidbatch.recycler.NameItem
+import com.mb.juneandroidbatch.viewpager.ViewPagers
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         val lifecycle = findViewById<Button>(R.id.lifecycle)
         val tictac = findViewById<Button>(R.id.tictactoe_btn)
         val frag = findViewById<Button>(R.id.frag_btn)
+        val viewPager = findViewById<Button>(R.id.viewpager_btn)
 
         frag.setOnClickListener {
             replace(fragment = FragmentTest())
@@ -98,6 +98,17 @@ class MainActivity : AppCompatActivity() {
                     startActivity(it)
                 }
             }catch (e: Exception){
+                e.printStackTrace()
+            }
+        }
+
+
+        viewPager.setOnClickListener {
+            try {
+                Intent(this, ViewPagers:: class.java).also {
+                    startActivity(it)
+                }
+            } catch (e: Exception){
                 e.printStackTrace()
             }
         }

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.JuneAndroidBatch"
         tools:targetApi="31">
         <activity
+            android:name=".viewpager.ViewPagers"
+            android:exported="false" />
+        <activity
             android:name=".TicTacToe"
             android:exported="false" />
         <activity
