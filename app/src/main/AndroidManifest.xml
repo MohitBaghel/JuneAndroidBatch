@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -16,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JuneAndroidBatch"
         tools:targetApi="31">
+        <activity
+            android:name=".WebviewActivity"
+            android:exported="false" />
         <activity
             android:name=".viewpager.ViewPagers"
             android:exported="false" />
@@ -41,12 +43,12 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".BoardCast"
+        <receiver
+            android:name=".BoardCast"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
-
         </receiver>
     </application>
 

@@ -93,6 +93,14 @@ class MainActivity : AppCompatActivity() {
         val frag = findViewById<Button>(R.id.frag_btn)
         val viewPager = findViewById<Button>(R.id.viewpager_btn)
         val sendbtn = findViewById<Button>(R.id.send_msg_btn)
+        val webbtn = findViewById<Button>(R.id.webview_btn)
+
+
+        webbtn.setOnClickListener {
+            Intent(this, WebviewActivity::class.java).also {
+                startActivity(it)
+            }
+        }
 
         frag.setOnClickListener {
             replace(fragment = FragmentTest())
