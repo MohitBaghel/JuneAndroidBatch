@@ -78,6 +78,19 @@
             android:layout_marginTop="10dp"
             android:id="@+id/viewpager_btn"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_message"
+            android:layout_marginTop="10dp"
+            android:id="@+id/send_msg_btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/open_webview"
+            android:layout_marginTop="10dp"
+            android:id="@+id/webview_btn"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

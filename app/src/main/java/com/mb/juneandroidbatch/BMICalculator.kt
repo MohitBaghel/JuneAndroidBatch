@@ -53,9 +53,9 @@ class BMICalculator : AppCompatActivity() {
 
          if(!weight_et.text.toString().equals("") && !height_ft.text.toString().equals("") && ! height_in.text.toString().equals("")){
 
-             val weight = weight_et!!.text.toString().toDouble()
-             val heightFt = height_ft!!.text.toString().toDouble()
-             val heightIn = height_in!!.text.toString().toDouble()
+             val weight = weight_et.text.toString().toDouble()
+             val heightFt = height_ft.text.toString().toDouble()
+             val heightIn = height_in.text.toString().toDouble()
 
              val totalInch = (heightFt * 12) + heightIn
              val totalcm = totalInch * 2.54

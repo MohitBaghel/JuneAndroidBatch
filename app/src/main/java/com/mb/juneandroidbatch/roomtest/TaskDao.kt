@@ -25,4 +25,4 @@ interface TaskDao {
 }
 
 /// coroutiones
-// live and architecture
+// livedata and architecture

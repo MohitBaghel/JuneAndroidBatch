@@ -54,5 +54,13 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0") // Check for the absolute latest version on Maven Central
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+
+
+//        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
+//        // For Android-specific features (e.g., Dispatchers.Main)
+//        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
     //implementation ("com.github.dhaval2404:imagepicker:2.1")
 }
